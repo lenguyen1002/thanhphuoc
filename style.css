@@ -1,0 +1,836 @@
+.menu-container {
+  width: 100%;
+  background-color: hwb(0 100% 0%); /* Màu nền trắng cho toàn bộ container */
+  display: flex;
+  flex-direction: column; /* Xếp logo/tên trường và menu theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(185, 199, 34, 0.1); /* Hiệu ứng bóng đổ nhẹ */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+}
+
+.logo-school {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.logo-school img {
+  height: 90px; /* Điều chỉnh chiều cao logo */
+  margin-right: 15px;
+}
+
+.logo-school h1 {
+  color: #ffc107; /* Màu vàng chủ đạo cho tên trường */
+  font-size: 40px;
+  margin: 0;
+}
+
+.logo-school p {
+  color: #1f2122; /* Màu chữ phụ */
+  font-size: 15px;
+  margin: 0;
+}
+
+.menu {
+  background-color: #ddbf6e; /* Màu nền sáng hơn cho menu chính */
+  padding: 10px 0;
+  width: 100%; /* Đảm bảo menu trải hết chiều ngang */
+  display: flex;
+  justify-content: center; /* Căn giữa các mục menu */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu ul li {
+  margin: 0 15px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #333; /* Màu chữ menu */
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  color: #ffc107; /* Màu vàng khi hover hoặc active */
+}
+
+.menu ul li a i {
+  margin-right: 5px; /* Khoảng cách cho icon (nếu có) */
+}
+
+body{
+
+  width: 100%; /* Đảm bảo body có chiều rộng 100% */
+  margin: 0; /* Loại bỏ margin mặc định của body */
+  padding: 0; /* Loại bỏ padding mặc định của body */
+}
+
+.menu-items {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li {
+  margin: 0 10px;
+}
+
+.menu-items li a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+
+.menu-items li a:hover,
+.menu-items li a.active {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.menu-items li a i {
+  margin-right: 5px;
+}
+
+body {
+  margin: 0;
+  padding-top:10px; /* Giá trị bằng chiều cao menu *//* Để tránh nội dung bị che */
+  line-height: 1.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #f8f8f8; /* Màu nền menu (ví dụ) */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+}
+
+
+.banner-below-menu {
+  width: 100%;
+  margin-top: 10px;/* Giá trị lớn hơn hoặc bằng chiều cao menu */
+  overflow: hidden; /* Ẩn các slide ngoài vùng hiển thị */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 900px; /* Điều chỉnh chiều cao nếu cần */
+ overflow: hidden;
+}
+
+.slide {
+  display: none; /* Ẩn tất cả các slide mặc định */
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh */
+}
+
+/* Hiệu ứng Fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.anhnen{
+        position: fixed;
+        top: 300px; 
+        left: 55%; 
+        transform: translate(-55%,-20%); 
+        z-index: -1; 
+} 
+.anhnen img {
+        max-width: 70%; 
+        max-height: 60%; 
+      }
+
+
+
+.noidung{
+    position: relative; 
+    z-index: 1; 
+    text-align: center; 
+
+}
+
+.scrolling-text-container {
+  width: 100%;
+  overflow: hidden; /* Ẩn phần văn bản vượt quá chiều rộng container */
+  white-space: nowrap; /* Ngăn văn bản xuống dòng */
+  background-color: #ffffff; /* Màu nền cho container (tùy chọn) */
+}
+
+.scrolling-text {
+  font-size: 24px;
+  display: inline-block; /* Hiển thị văn bản trên cùng một dòng */
+  padding-left: 100%; /* Đặt văn bản ra ngoài màn hình ở bên phải */
+  animation: scroll-left 20s linear infinite; /* Tạo hiệu ứng chạy */
+  color: rgb(87, 87, 87) ; /* Màu chữ xanh */
+  font-weight: bolder;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.image-gallery {
+  display: flex;
+  width: 100%; /* Đảm bảo container chiếm toàn bộ chiều rộng trang web */
+}
+
+.image-gallery img {
+  flex: 1; /* Chia đều chiều rộng cho các ảnh */
+  height: 100px; /* Điều chỉnh chiều cao ảnh theo ý muốn */
+  object-fit: cover; /* Lấp đầy container mà không bị méo */
+}
+
+.banner {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+  .section-title {
+    margin-top: 50px;
+    color: rgb(177, 101, 14); /* Màu vàng cho chữ */
+    font-size: 2em; /* Điều chỉnh kích thước chữ tùy ý */
+    font-weight: bolder; /* In đậm chữ (tùy chọn) */
+    margin-right: 80%;
+    padding-left: 15px; /* Tạo khoảng cách giữa đường kẻ và chữ */
+    border-left: 5px solid rgb(129, 4, 0); /* Đường kẻ dọc màu đỏ (điều chỉnh màu và độ dày) */
+    margin-bottom: 20px; /* Tạo khoảng cách với nội dung bên dưới (tùy chọn) */
+    /* Các стили khác tùy ý */
+
+  }
+
+
+  main {
+    /* Các стили cho phần nội dung chính */
+    margin-bottom: 50px; /* Tạo khoảng cách giữa nội dung chính và footer */
+    padding: 20px;
+}
+
+footer {
+    background-color: #ddbf6e; /* Màu đỏ tương tự */
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1300px; /* Giới hạn chiều rộng footer */
+    margin: 0 auto ; /* Căn giữa và tạo khoảng cách với copyright */
+}
+
+.footer-logo {
+    text-align: center;
+}
+
+.footer-logo img {
+    height: 100px; /* Điều chỉnh chiều cao logo */
+    margin-bottom: 0px;
+}
+
+.footer-logo p {
+    font-size: 1.4em;
+    margin: 0;
+}
+
+.footer-info {
+    text-align: left;
+    margin-left: 400px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+.footer-info a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-social img {
+    height: 30px; /* Điều chỉnh kích thước icon mạng xã hội */
+}
+
+.footer-copyright {
+    background-color: #ddbf6e; /* Màu đỏ đậm hơn cho copyright */
+    padding: 10px;
+    font-size: 0.8em;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+/* Điều chỉnh cho màn hình nhỏ hơn (tùy chọn) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-logo {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .footer-info {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+  }
+
+  /* MUI TEN */
+
+  #scrollToTopBtn {
+    display: none; /* Ẩn nút mặc định */
+    position: fixed; /* Cố định vị trí trên màn hình */
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Đảm bảo nút nằm trên các phần tử khác */
+    border: none;
+    outline: none;
+    background-color: rgb(84, 84, 223); /* Màu xanh lục tương tự */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%; /* Tạo hình tròn */
+    font-size: 20px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+    opacity: 1;
+}
+
+#scrollToTopBtn svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+
+
+.image-title-layout.centered-layout {
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 253, 253, 0.08);
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  width: 90%; /* Điều chỉnh chiều rộng container */
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; /* Căn giữa nội dung bên trong (tùy chọn) */
+}
+
+.image-title-layout.centered-layout .news-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0; /* Thêm margin trên và dưới cho danh sách */
+}
+
+.image-title-layout.centered-layout .news-item {
+  margin-bottom: 15px;
+  border-bottom: none;
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  max-width: 1400px; /* Điều chỉnh chiều rộng mỗi thanh */
+  margin-left: 10px;
+  margin-right: auto;
+}
+
+.image-title-layout.centered-layout .news-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+}
+
+.image-title-layout.centered-layout .news-link:hover {
+  transform: scale(1.02);
+}
+
+.image-title-layout.centered-layout .news-image-container {
+  width: 400px; /* Điều chỉnh kích thước ảnh */
+  height: 250px; /* Điều chỉnh kích thước ảnh */
+  border-radius: 5px;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.image-title-layout.centered-layout .news-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-title-layout.centered-layout .news-content {
+  flex: 1;
+  text-align: left; /* Căn trái nội dung chữ */
+}
+
+.image-title-layout.centered-layout .news-large-title {
+  font-size: 2em;
+  font-weight: bold;
+  color: #020202;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.image-title-layout.centered-layout .news-small-note {
+  color: #777;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.view-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.view-more-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ddbf6e; /* Màu nền sáng hơn cho menu chính */
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.view-more-link:hover {
+  background-color: #ffffff;
+}
+
+
+
+.modern-events-grid {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #535353;
+  margin-bottom: 30px; 
+  margin-top: 70px;
+  position: relative;
+}
+
+.modern-events-grid .events-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.modern-events-grid .vertical-bar {
+  font-size: 1.5em;
+  color: #797979;
+  margin-right: 10px;
+}
+
+.section-title2 {
+  margin-top: 70px;
+  color: rgb(212, 134, 44); /* Màu vàng cho chữ */
+  font-size: 2em; /* Điều chỉnh kích thước chữ tùy ý */
+  font-weight: bolder; /* In đậm chữ (tùy chọn) */
+  margin-right: 80%;
+  padding-left: 15px; /* Tạo khoảng cách giữa đường kẻ và chữ */
+  border-left: 5px solid rgb(131, 78, 0); /* Đường kẻ dọc màu đỏ (điều chỉnh màu và độ dày) */
+  margin-bottom: 30px; /* Tạo khoảng cách với nội dung bên dưới (tùy chọn) */
+  /* Các стили khác tùy ý */
+
+}
+
+.modern-events-grid .view-more-link {
+  display: inline-flex; /* Sử dụng inline-flex để căn chỉnh icon */
+  align-items: center; /* Căn chỉnh icon và chữ theo chiều dọc */
+  padding: 10px 15px;
+  background-color: #bda157;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 20px; /* Cách đáy 20px */
+  right: 20px;
+}
+
+.modern-events-grid .view-more-link:hover {
+  background-color: #ddbf6e;
+  box-shadow: 0 4px 10px rgba(15, 15, 15, 0.15);
+}
+
+.modern-events-grid .arrow-icon {
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+.modern-events-grid .events-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modern-events-grid .event-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.modern-events-grid .event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modern-events-grid .event-link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.modern-events-grid .event-image-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modern-events-grid .event-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.modern-events-grid .event-link:hover .event-image-container img {
+  transform: scale(1.05);
+}
+
+.modern-events-grid .event-title {
+  padding: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+
+
+
+.section-title3 {
+  margin-top: 100px;
+  color: rgb(177, 101, 14); /* Màu vàng cho chữ */
+  font-size: 1.8em; /* Điều chỉnh kích thước chữ tùy ý */
+  font-weight: bolder; /* In đậm chữ (tùy chọn) */
+  margin-right: 80%;
+  padding-left: 15px; /* Tạo khoảng cách giữa đường kẻ và chữ */
+  border-left: 5px solid rgb(129, 4, 0); /* Đường kẻ dọc màu đỏ (điều chỉnh màu và độ dày) */
+  margin-bottom: 60px; /* Tạo khoảng cách với nội dung bên dưới (tùy chọn) */
+  /* Các стили khác tùy ý */
+}
+
+
+
+.media-box.labeled-grid {
+  background-color: #eff0ed;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  width: 80%; /* Giảm chiều rộng của box (điều chỉnh theo ý muốn) */
+  margin-left: auto; /* Căn giữa theo chiều ngang */
+  margin-right: auto; /* Căn giữa theo chiều ngang */
+}
+
+.media-box.labeled-grid .media-tabs {
+  display: flex;
+  background-color: #ddbf6e;
+  border-bottom: 1px solid #ccc;
+}
+
+.media-box.labeled-grid .media-tabs .tab {
+  flex: 1;
+  padding: 10px 15px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  transition: background-color 0.3s ease;
+}
+
+.media-box.labeled-grid .media-tabs .tab.active {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 2px solid #fafafa; /* Màu xanh dương cho tab active */
+}
+
+.media-box.labeled-grid .media-content {
+  padding: 15px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.media-box.labeled-grid .video-section {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+.media-box.labeled-grid .main-video-container {
+  flex: 2;
+}
+
+.media-box.labeled-grid .video-player {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.media-box.labeled-grid .small-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-box.labeled-grid .video-player.main-video {
+  position: relative;
+  width: 100%; /* Make the video player take full width */
+  aspect-ratio: 16 / 9; /* Keep the aspect ratio */
+  background-color: #333;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-box.labeled-grid .video-player.main-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Make the video fill the container */
+}
+.media-box.labeled-grid .play-button::before {
+  content: "";
+  display: block;
+  border-left: 20px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.media-box.labeled-grid .video-caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 10px;
+}
+
+.media-box.labeled-grid .sidebar-videos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.media-box.labeled-grid .small-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #333;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-box.labeled-grid .small-play-button {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.media-box.labeled-grid .small-play-button:hover {
+  opacity: 1;
+}
+
+.media-box.labeled-grid .small-play-button::before {
+  content: "";
+  display: block;
+  border-left: 14px solid rgb(255, 255, 255);
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.media-box.labeled-grid .small-caption {
+  font-size: 1.2em;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.media-box.labeled-grid .gallery-section {
+  display: none;
+  margin-top: 15px;
+}
+
+.media-box.labeled-grid .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Giữ 3 cột */
+  gap: 15px;
+}
+
+.media-box.labeled-grid .gallery-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.media-box.labeled-grid .gallery-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.media-box.labeled-grid .image-label {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2em;
+  color: #000000;
+  background-color: #f0f0f0;
+  margin-bottom: 0;
+}

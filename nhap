@@ -1,0 +1,43 @@
+ 
+
+        <div class="gioi-thieu-container">
+            <div class="gioi-thieu-item">
+              <div class="gioi-thieu-image">
+        <!-- Thêm đường dẫn bài giới thiệu vào -->
+                <a href="/images/465840945_1113815920745388_9116362604046230980_n.jpg"><img src="/images/465840945_1113815920745388_9116362604046230980_n.jpg" alt="Ảnh 1"></a>
+              </div>
+              <div class="gioi-thieu-content">
+                <a href="/images/2(18).jpg"><h3>Hình thành của trường THPT Thạnh Phước</h3></a>
+                <p>25/03/2025</p>
+                <p>Trường THPT THẠNH PHƯỚC </p>
+              </div>
+            </div>
+            
+
+            <div class="gioi-thieu-container">
+                <div class="gioi-thieu-item">
+                  <div class="gioi-thieu-image">
+            <!-- Thêm đường dẫn bài giới thiệu vào -->
+                    <a href="/images/465840945_1113815920745388_9116362604046230980_n.jpg"><img src="/images/465840945_1113815920745388_9116362604046230980_n.jpg" alt="Ảnh 1"></a>
+                  </div>
+                  <div class="gioi-thieu-content">
+                    <a href="/images/2(18).jpg"><h3>Hình thành của trường THPT Thạnh Phước</h3></a>
+                    <p>25/03/2025</p>
+                    <p>Trường THPT THẠNH PHƯỚC </p>
+                  </div>
+                </div>
+            
+    </div>
+
+    <div class="gioi-thieu-container">
+      <div class="gioi-thieu-item">
+        <div class="gioi-thieu-image">
+  <!-- Thêm đường dẫn bài giới thiệu vào -->
+          <a href="/images/465840945_1113815920745388_9116362604046230980_n.jpg"><img src="/images/465840945_1113815920745388_9116362604046230980_n.jpg" alt="Ảnh 1"></a>
+        </div>
+        <div class="gioi-thieu-content">
+          <a href="/images/2(18).jpg"><h3>Hình thành của trường THPT Thạnh Phước</h3></a>
+          <p>25/03/2025</p>
+          <p>Trường THPT THẠNH PHƯỚC </p>
+        </div>
+      </div>
